@@ -1,8 +1,7 @@
-from fidel import Reverse
+import sys
+import io
 
-text = "በጣም ጥሩ ሰው ነው። "
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-reversed = Reverse(text, symbol=True)
-
-print(reversed)
+print("\u1200")
 
