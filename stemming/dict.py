@@ -8,7 +8,7 @@ amharic_to_english = {
   "\u1205": "h",
   "\u1206": "ho",
   "\u1207": "hoa",
-  "\u1208": "le",
+  "\u1208": "la",
   "\u1209": "lu",
   "\u120A": "li",
   "\u120B": "la",
@@ -24,7 +24,7 @@ amharic_to_english = {
   "\u1215": "h",
   "\u1216": "ho",
   "\u1217": "hwa",
-  "\u1218": "me",
+  "\u1218": "ma",
   "\u1219": "mu",
   "\u121A": "mi",
   "\u121B": "ma",
@@ -32,7 +32,7 @@ amharic_to_english = {
   "\u121D": "m",
   "\u121E": "mo",
   "\u121F": "mwa",
-  "\u1220": "se",
+  "\u1220": "sa",
   "\u1221": "su",
   "\u1222": "si",
   "\u1223": "sa",
@@ -89,7 +89,7 @@ amharic_to_english = {
   "\u125A": "qhwa",
   "\u125B": "qhwe",
   "\u125C": "qhwe",
-  "\u1260": "be",
+  "\u1260": "ba",
   "\u1261": "bu",
   "\u1262": "bi",
   "\u1263": "ba",
@@ -358,18 +358,31 @@ amharic_to_english = {
 
 prefixes = [
     # Add common Amharic prefixes
-    "ye",
+    
+    "ba",
+    "as",
+    "wede",
+    "sla",
+    "eye",
+    "beye",
+    "may",
     "esk",
+    "ene",
     "eske",
 ]
 
 postfixes = [
     #common Amharic postfixes
-    "ye",
     "achin",
     "chihu",
+    "enya",
     "chew",
+    "och",
     "achew",
+    "net",
+    "wn",
+    "wun",
+    "netu",
     "wa",
 ]
 abbreveations = {
