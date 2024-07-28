@@ -13,7 +13,8 @@ def main():
     print("Token: ",tokens)
     stemmed_tokens = [stemming.stem(token) for token in tokens]
     final_tokens = [replace_with_rule(token, dict.Rule) for token in stemmed_tokens]
-    print("Final text:", ' '.join(final_tokens))
+    print("stem:", ' '.join(final_tokens))
+   
    
     
 if __name__ == "__main__":
