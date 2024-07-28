@@ -359,6 +359,8 @@ amharic_to_english = {
 prefixes = [
     # Add common Amharic prefixes
     "ya",
+    "la",
+    "ka",
     "ba",
     "as",
     "wede",
@@ -385,6 +387,7 @@ postfixes = [
     "enya",
     "chew",
     "chewn",
+    "aachewn",
     "och",
     "och",
     "ochn",
@@ -403,15 +406,22 @@ postfixes = [
     "baat",
     "bsh",
     "bn",    
+    "u",    
+    "ua",    
+    "w",    
+    "batn",    
 ]
 
-Rule ={
+Rule={
   'chn':'ch',
   'enchlaalan':'mechal',
   'enchlaalan':'mechal',
   'miqoxaru':'quxr',
   'mequxerya':'quxr',
   'hgaawi':'hg',
+  'endifaqdlaachaw':'fiqad',
+  'endifaqdlet':'fiqad',
+  'endifaqdlaat':'fiqad',
 }
 
 
