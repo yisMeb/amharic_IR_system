@@ -410,6 +410,7 @@ postfixes = [
     "ua",    
     "w",    
     "batn",    
+    "maa",    
 ]
 
 Rule={
@@ -422,6 +423,7 @@ Rule={
   'endifaqdlaachaw':'fiqad',
   'endifaqdlet':'fiqad',
   'endifaqdlaat':'fiqad',
+  
 }
 
 
