@@ -357,7 +357,7 @@ amharic_to_english = {
 
 
 prefixes = [
-    # Add common Amharic prefixes
+    #common Amharic prefixes
     "ya",
     "la",
     "ka",
