@@ -372,6 +372,7 @@ prefixes = [
     "ene",
     "eska",
     "enda",
+    "endi",
     "endaa",
 ]
 
@@ -388,7 +389,6 @@ postfixes = [
     "chew",
     "chewn",
     "aachewn",
-    "och",
     "och",
     "ochn",
     "un",
@@ -409,8 +409,10 @@ postfixes = [
     "u",    
     "ua",    
     "w",    
+    "chaw",    
     "batn",    
     "maa",    
+    "anya",    
 ]
 
 Rule={
