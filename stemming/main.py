@@ -8,7 +8,7 @@ def replace_with_rule(token, rule):
     return token
 
 def main():
-    user_input = input("Enter Amharic text: ").strip()
+    user_input = input("Enter text: ").strip()
     tokens = tokenization.tokenize(user_input)
     print("TOKEN: ",tokens)
     stem = [replace_with_rule(token, dict.Rule) for token in tokens]

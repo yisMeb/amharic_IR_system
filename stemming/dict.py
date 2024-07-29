@@ -392,7 +392,6 @@ postfixes = [
     "aachewn",
     "ochn",
     "ochaachaw",       
-    "woch",
     "och",
     "un",
     "achew",
@@ -517,6 +516,8 @@ Rule={
   'wadada':'mawded',
   'mawadad':'mawded',
   'wadadach':'mawded',
+  'alaqnet':'aleqa',
+  'alaqoch':'aleqa',
 }
 
 exceptions=[
@@ -531,5 +532,3 @@ exceptions=[
   "kaf",
   "astadaadar",
 ]
-
-
