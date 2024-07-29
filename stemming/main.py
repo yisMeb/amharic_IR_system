@@ -11,11 +11,14 @@ def main():
     user_input = input("Enter Amharic text: ").strip()
     tokens = tokenization.tokenize(user_input)
     print("TOKEN: ",tokens)
-    stemmed_tokens = [stemming.stem(token) for token in tokens]
-    stem = [replace_with_rule(token, dict.Rule) for token in stemmed_tokens]
-    print("STEM:", ' , '.join(stem))
-
+    stem = [replace_with_rule(token, dict.Rule) for token in tokens]
    
+    stemmed_tokens = [
+        stemming.stem(token) if token not in dict.exceptions else token
+        for token in stem
+    ]   
+    print("STEM:", ' , '.join(stemmed_tokens))
+    
     
 if __name__ == "__main__":
     main()
