@@ -274,14 +274,14 @@ amharic_to_english = {
   "\u1325": "x",
   "\u1326": "xo",
   "\u1327": "thwa",
-  "\u1328": "cha",
-  "\u1329": "chu",
-  "\u132A": "chi",
-  "\u132B": "chaa",
-  "\u132C": "che",
-  "\u132D": "ch",
-  "\u132E": "cho",
-  "\u132F": "chwa",
+  "\u1328": "Cha",
+  "\u1329": "Chu",
+  "\u132A": "Chi",
+  "\u132B": "Chaa",
+  "\u132C": "Che",
+  "\u132D": "Ch",
+  "\u132E": "Cho",
+  "\u132F": "Chwa",
   "\u1330": "pha",
   "\u1331": "phu",
   "\u1332": "phi",
@@ -356,6 +356,7 @@ amharic_to_english = {
 
 prefixes = [
     #common Amharic prefixes
+    "yamiyaa",
     "endaa",
     "wada",
     "baya",
@@ -377,9 +378,12 @@ prefixes = [
 
 postfixes = [
     #common Amharic postfixes
-    "ochaachaw",       
+    "ochaachaw",   
+    "ochaachn",   
     "baachaw",
     "aachewn",
+    "wyanoch",
+    "taalach", 
     "achewn",
     "achawn",    
     "chihun",
@@ -393,8 +397,9 @@ postfixes = [
     "achnn",
     "chihu",
     "chawn",    
-    "naten",    
+    "naten",  
     "enya",
+    "twal",
     "netn",
     "chew",
     "ochn",
@@ -421,10 +426,63 @@ postfixes = [
     "bh",
     "bn",    
     "wn",
+    "ch",
     "u",    
     "w",    
     "m",    
  ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Rule={
   'enchlaalan':'mechal',

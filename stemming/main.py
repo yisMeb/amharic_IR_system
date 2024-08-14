@@ -29,12 +29,12 @@ def main():
     user_input = input("Enter text: ").strip()
     is_amh = is_amharic(user_input)
     tokens = tokenization.tokenize(user_input)
+    print (tokens)
     stem = [replace_with_rule(token, dict.Rule) for token in tokens]
     stemmed_tokens = [
         stemming.stem(token) if token not in dict.exceptions else token
         for token in stem
     ]
-    
     if is_amh:
         amh = {v: k for k, v in dict.amharic_to_english.items()}
         answer = [pair_consonant_with_vowel(token, amh) for token in stemmed_tokens]
