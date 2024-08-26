@@ -27,7 +27,7 @@ def remove_infix(word):
     
     for i in range(1, length - 1):
             
-        if word[i] == 'a' and word[i-1] == word[i+2]: # Rule for CaC pattern. for words like temelalese, it removes 'la' and returns the remaining string
+        if word[i] == 'a' and word[i-1] == word[i+2]: 
                 return word[:i-1] + word[i+2:]
         if word[i] == 'a':
             left = word[:i]
@@ -39,10 +39,11 @@ def remove_infix(word):
                 return left[:-min_length] + right 
     return word
 
-          
+
 def stem(word):
     
     word = remove_prefix(word)
-    word = remove_infix(word)
+    #word = remove_infix(word)
     word = remove_postfix(word)
     return word
+

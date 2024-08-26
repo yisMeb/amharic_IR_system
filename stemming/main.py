@@ -1,6 +1,8 @@
+from indexing import build_index,save_index_to_json
 import tokenization
-import stemming
-import dict
+import termweighting
+import os
+import re
 
 def replace_with_rule(token, rule):
     for key, value in rule.items():
@@ -24,25 +26,45 @@ def pair_consonant_with_vowel(stemmed_token, reverse_dict):
             amharic_word += stemmed_token[i]
         i += 1
     return amharic_word
+def preprocess():
+    doc_dir = './documents'
+    
+    amharic_pattern = re.compile('[\u1200-\u137F]+')
+    
+    for filename in os.listdir(doc_dir):
+        file_path = os.path.join(doc_dir, filename)
+        
+        if os.path.isfile(file_path) and filename.endswith('.txt'):
+            with open(file_path, 'r', encoding='utf-8') as file:
+                content = file.read()
+            
+            filtered_content = ' '.join(amharic_pattern.findall(content))
+            
+            with open(file_path, 'w', encoding='utf-8') as file:
+                file.write(filtered_content)
+                
+            print(f"Processed {filename}")
+
 
 def main():
-    user_input = input("Enter text: ").strip()
-    is_amh = is_amharic(user_input)
-    tokens = tokenization.tokenize(user_input)
-    print (tokens)
-    stem = [replace_with_rule(token, dict.Rule) for token in tokens]
-    stemmed_tokens = [
-        stemming.stem(token) if token not in dict.exceptions else token
-        for token in stem
-    ]
-    if is_amh:
-        amh = {v: k for k, v in dict.amharic_to_english.items()}
-        answer = [pair_consonant_with_vowel(token, amh) for token in stemmed_tokens]
-        print("STEM:", ' , '.join(answer))
-    else:
-        print("STEM:", ' , '.join(stemmed_tokens))
-        
+    
+    preprocess()
+    
+    doc_dir = './documents'
+    index_file = './indexed_doc.json'
+    weighting = './termWeights.json'
+    #tokenization
+    tokens_by_file = tokenization.tokenize(doc_dir)
+    #indexing
+    index = build_index(tokens_by_file)
+    save_index_to_json(index, index_file)
+    
+    # term weighting
+    index = termweighting.load_index(index_file)
+    tf_idf_scores = termweighting.calculate_tf_idf(index)
+    termweighting.save_term_weights(tf_idf_scores, weighting)
+    
+
+         
 if __name__ == "__main__":
     main()
-
-

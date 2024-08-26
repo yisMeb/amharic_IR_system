@@ -433,7 +433,20 @@ postfixes = [
  ]
 
 
-
+stop_word_list=[
+    "slamihon", "enaa", "slazih", "bamahonum", "hulu", "hona", "lelaa", "lk", "sla", "baqar",
+    "bchaa", "naa", "andaach", "and", "enda", "enji", "yaahl", "ylq", "wada", "ene", "yaene",
+    "raase", "enya", "yaenya", "eraasaachn", "anchi", "yaerswo", "raash", "raasaachhu", "esu",
+    "esun", "yaesu", "raasu", "erswa", "yaeswa", "raaswa", "enasu", "enasun", "yaenasu",
+    "eraasaachaw", "mndn", "yatnyaw", "maann", "yh", "enazih", "enaziyaa", "nany", "naw",
+    "naachaw", "nabar", "nabaru", "hun", "mahon", "alany", "alaw", "nabara", "manor",
+    "yaadargaal", "adaragaw", "masraat", "gn", "kahona", "waym", "mknyaatum", "eska",
+    "bihonm", "gaar", "laay", "makaakal", "bakul", "waqt", "bahwalaa", "kalaay", "bartwal",
+    "xaftwal", "balaay", "sr", "endaganaa", "taChamaari", "kaziyaa", "ande", "ezih",
+    "eziyaa", "mache", "yat", "endet", "hulum", "maanaachawm", "hulatum", "eyaandaandu",
+    "xqitoch", "baxaam", "andaand", "ay", "aydalam", "yaraas", "tamasaasaay", "enem",
+    "ychlaal", "yhonaal", "baqaa", "ahun"
+]
 
 
 
