@@ -3,8 +3,12 @@ import dict
 def remove_prefix(word):
     w1=word
     num = round((len(word))/2)
+    
+    if(len(word) <=4):
+        return word   
+    
     if(w1[0:num-1] == w1[num+1:len(w1)]):
-            return w1[num+1:len(w1)]
+        return w1[num+1:len(w1)]
         
     for prefix in dict.prefixes:
         if word.startswith(prefix):
@@ -39,11 +43,11 @@ def remove_infix(word):
                 return left[:-min_length] + right 
     return word
 
-
+          
 def stem(word):
     
     word = remove_prefix(word)
-    #word = remove_infix(word)
     word = remove_postfix(word)
+    #word = remove_infix(word)
+    
     return word
-

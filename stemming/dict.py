@@ -360,10 +360,13 @@ prefixes = [
     "endaa",
     "wada",
     "baya",
+    "laya",
     "eska",
     "enda",
     "endi",
+    "yaya",
     "sla",
+    "eya",
     "esk",
     "ena",
     "eye",
@@ -376,8 +379,12 @@ prefixes = [
     "ya",
 ]
 
+
 postfixes = [
     #common Amharic postfixes
+    "wochaachawn",
+    "ochaachawn",
+    "wochaachn",
     "ochaachaw",   
     "ochaachn",   
     "baachaw",
@@ -419,6 +426,8 @@ postfixes = [
     "awi",
     "naa",    
     "och",
+    "wit",
+    "wiw",
     "wa",
     "ua",    
     "un",
@@ -431,6 +440,7 @@ postfixes = [
     "w",    
     "m",    
  ]
+
 
 
 stop_word_list=[
