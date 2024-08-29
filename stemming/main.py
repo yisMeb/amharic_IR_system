@@ -36,7 +36,7 @@ def pair_consonant_with_vowel(stemmed_token, reverse_dict):
 # Preprocessing function
 def preprocess():
     #change this one to your location
-    doc_dir = 'C:\\Users\\Wongel Dawit\\Desktop\\amharic_stemmer\\stemming\\documents'
+    doc_dir = 'stemming\documents'
     amharic_pattern = re.compile('[\u1200-\u137F]+')
     
     for filename in os.listdir(doc_dir):
@@ -65,7 +65,7 @@ def stem_input(user_input):
 
 # Query processing function
 def process_query(query):
-    doc_dir = 'C:\\Users\\Wongel Dawit\\Desktop\\amharic_stemmer\\stemming\\documents'
+    doc_dir = 'stemming\documents'
     stemmed_query = stem_input(query)
     document_scores = {}
 
@@ -110,7 +110,7 @@ def open_document_window(doc_path):
     text.insert(tk.END, content)
     text.pack()
 
-    back_button = tk.Button(doc_window, text="Back to Search Results", command=go_back)
+    back_button = tk.Button(doc_window, text="ተመለስ", command=go_back)
     back_button.pack()
 
 # Search query function
@@ -118,7 +118,7 @@ def search_query():
     query = entry.get().strip()
     
     if not query:
-        messagebox.showwarning("Input Error", "Please enter a search query.")
+        messagebox.showwarning("ያስገቡት ነገር ላይ ችግር አለ", "መፈለግ የሚፈልጉትን ያስገቡ!")
         return
 
     results = process_query(query)
@@ -133,30 +133,30 @@ def search_query():
             result_text.window_create(tk.END, window=link)
             result_text.insert(tk.END, f"\nPreview: {result['preview']}...\n\n")
     else:
-        result_text.insert(tk.END, "No results found.")
+        result_text.insert(tk.END, "ምንም አልተገኘም!")
 
 # Launch the GUI
 def launch_gui():
     global entry, result_text, root, term_weights, doc_dir
 
     root = tk.Tk()
-    root.title("Amharic IR System")
+    root.title("አማርኛ መረጃ መፈለግያ")
 
     # Load the term weights from the JSON file
     with open('termWeights.json', 'r', encoding='utf-8') as file:
         term_weights = json.load(file)
     
-    doc_dir = 'C:\\Users\\Wongel Dawit\\Desktop\\amharic_stemmer\\stemming\\documents'
+    doc_dir = 'stemming\documents'
 
     # Create the input field
-    label = tk.Label(root, text="Enter your search query:")
+    label = tk.Label(root, text="መፈለግ የሚፈልጉትን ያስገቡ:")
     label.pack(pady=10)
 
     entry = tk.Entry(root, width=50)
     entry.pack(pady=5)
 
     # Create the search button
-    search_button = tk.Button(root, text="Search", command=search_query)
+    search_button = tk.Button(root, text="ፈልግ", command=search_query)
     search_button.pack(pady=5)
 
     # Create the results display area
@@ -168,7 +168,7 @@ def launch_gui():
 def main():
     preprocess()
     
-    doc_dir = 'C:\\Users\\Wongel Dawit\\Desktop\\amharic_stemmer\\stemming\\documents'
+    doc_dir = 'stemming\documents'
     index_file = './indexed_doc.json'
     weighting = './termWeights.json'
     
